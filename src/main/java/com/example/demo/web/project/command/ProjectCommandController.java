@@ -36,6 +36,7 @@ public class ProjectCommandController {
             ProjectVO projectVO = projectService.createProject(command);
             return ResponseEntity.status(HttpStatus.CREATED).body(projectVO);
         } catch (IllegalArgumentException e) {
+            e.printStackTrace();
             return ResponseEntity.badRequest().build();
         }
     }
