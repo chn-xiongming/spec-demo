@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 @Mapper
 public interface UserMapper {
     
-    @Select("SELECT * FROM users WHERE id = #{id}")
+    @Select("SELECT * FROM users WHERE id = #{id} and 1=1")
     UserPO findById(Long id);
     
     @Select("SELECT * FROM users WHERE username = #{username}")
